@@ -1,0 +1,253 @@
+:root {
+  --main-color: #f9b234;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+body {
+  height: 793px; /*A5 magassag*/
+  width: 559px; /*A5 szelesseg*/
+  margin: auto;
+}
+
+/* top */
+
+.top-bar {
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+i {
+  font-size: 1.1rem;
+}
+
+.top-inner-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.top-bar-image {
+  width: 80%;
+  padding: 1rem 0 1rem 0;
+}
+
+.top-bar-inner-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.8rem 0 0.8rem;
+}
+
+.table-index {
+  justify-self: end;
+  border: 3px solid black;
+  border-radius: 50%;
+  padding: 0.6rem;
+  margin-right: 20px;
+  background-color: var(--main-color);
+  margin-bottom: -40px;
+  grid-column: 2;
+}
+
+/* main */
+
+.main {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  margin-top: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+.qr-image {
+  width: 220px;
+  padding: 1rem;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+.qr-image-mini {
+  width: 100px;
+}
+
+.qr-container {
+  grid-column: 2;
+  text-transform: uppercase;
+}
+
+.qr-text-y-axis {
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.qr-text-x-axis-left {
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.qr-text-x-axis-right {
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.qr-inner-container {
+  display: flex;
+  gap: 10px;
+}
+
+.BorderCorner {
+  border: 2px solid var(--main-color);
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: auto;
+}
+
+.BorderCorner img {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+.BorderCorner::before,
+.BorderCorner::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+}
+
+.BorderCorner::before {
+  width: calc(100% + 50px + 4px - 120px);
+  height: calc(100% + 4px);
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.BorderCorner::after {
+  height: calc(100% + 50px + 4px - 120px);
+  width: calc(100% + 4px);
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.main-text {
+  margin-top: 25px;
+  text-align: center;
+  padding: 0 2rem 0 2rem;
+}
+
+/* bottom */
+
+.list {
+  grid-area: list;
+  background-color: var(--main-color);
+  text-transform: uppercase;
+  display: grid;
+  grid-template-rows: 1fr 30px 1fr;
+  align-items: start;
+  justify-content: start;
+}
+
+.list-inner {
+  display: grid;
+  margin: auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 10px;
+}
+
+.list-inner li {
+  padding: 0 6px 0 6px;
+}
+
+.list-inner li:first-child {
+  margin-top: 10px;
+}
+
+.last-li {
+  margin-bottom: 10px;
+}
+
+.bottom-line {
+  border: 2px solid black;
+}
+
+.number {
+  background-color: black;
+  border-radius: 70%;
+  padding: 0 5px 0 5px;
+  color: var(--main-color);
+  margin-right: 5px;
+}
+
+.bottom-image {
+  grid-area: bottomImage;
+  width: 100%;
+  height: 100%;
+}
+
+.app-data-container {
+  grid-area: appDataContainer;
+  background-color: lightgray;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-container {
+  display: grid;
+  grid-template-areas:
+    "list bottomImage"
+    "list appDataContainer";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 20px;
+}
+
+/* utility */
+
+.bottom-line {
+  width: 90%;
+  border-bottom: 4px solid black;
+  margin: auto;
+}
+
+.ml-1 {
+  margin-left: 0.4rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.6rem;
+}
