@@ -13,9 +13,9 @@
   line-height: 1.4;
 }
 
-body {
-  height: 793px; /*A5 magassag*/
-  width: 559px; /*A5 szelesseg*/
+html {
+  height: 210mm; /*A5 magassag*/
+  width: 148mm; /*A5 szelesseg*/
   margin: auto;
 }
 
